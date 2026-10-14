@@ -1,0 +1,272 @@
+[
+  {
+    "id": "qb-1791710046548-4279c1",
+    "category": "Login_Audit_Logs",
+    "entityType": "audit",
+    "entityId": "sec-1791710046547-748",
+    "action": "create",
+    "data": {
+      "id": "sec-1791710046547-748",
+      "timestamp": "2026-10-11T09:14:06.547Z",
+      "action": "OWNER_LOGIN_SUCCESS",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Owner authenticated with verified password."
+    },
+    "timestamp": "2026-10-11T09:14:06.548Z",
+    "attempts": 0
+  },
+  {
+    "id": "qb-1791710046587-bc1e6d",
+    "category": "Login_Audit_Logs",
+    "entityType": "audit",
+    "entityId": "sec-1791710046587-266",
+    "action": "create",
+    "data": {
+      "id": "sec-1791710046587-266",
+      "timestamp": "2026-10-11T09:14:06.587Z",
+      "action": "OWNER_ACCOUNT_INITIALIZED_WITH_RECOVERY_KEY",
+      "userIdentifier": "v******8@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Owner account initialized with email v******8@gmail.com and phone +91 88*** **728. Emergency recovery key generated and hashed before disk storage."
+    },
+    "timestamp": "2026-10-11T09:14:06.587Z",
+    "attempts": 0
+  },
+  {
+    "id": "qb-1791710060313-c060e6",
+    "category": "Login_Audit_Logs",
+    "entityType": "audit",
+    "entityId": "sec-1791710060312-731",
+    "action": "create",
+    "data": {
+      "id": "sec-1791710060312-731",
+      "timestamp": "2026-10-11T09:14:20.312Z",
+      "action": "OWNER_LOGIN_SUCCESS",
+      "userIdentifier": "v******8@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Owner authenticated with verified password."
+    },
+    "timestamp": "2026-10-11T09:14:20.313Z",
+    "attempts": 0
+  },
+  {
+    "id": "qb-1791710061304-c8d4d8",
+    "category": "Login_Audit_Logs",
+    "entityType": "audit",
+    "entityId": "sec-1791710061304-826",
+    "action": "create",
+    "data": {
+      "id": "sec-1791710061304-826",
+      "timestamp": "2026-10-11T09:14:21.304Z",
+      "action": "GMAIL_SMTP_DELIVERY_TEST",
+      "userIdentifier": "v******8@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "FAILURE",
+      "details": "Gmail SMTP test sent to v******8@gmail.com: Outcome FAIL. Result: Failed to deliver email. The mail service reported a transmission error."
+    },
+    "timestamp": "2026-10-11T09:14:21.304Z",
+    "attempts": 0
+  },
+  {
+    "id": "qb-1791711023256-9a2d15",
+    "category": "Login_Audit_Logs",
+    "entityType": "audit",
+    "entityId": "sec-1791711023254-997",
+    "action": "create",
+    "data": {
+      "id": "sec-1791711023254-997",
+      "timestamp": "2026-10-11T09:30:23.254Z",
+      "action": "OWNER_LOGIN_SUCCESS",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Owner authenticated with verified password."
+    },
+    "timestamp": "2026-10-11T09:30:23.255Z",
+    "attempts": 0
+  },
+  {
+    "id": "qb-1791711032819-bd44e8",
+    "category": "Login_Audit_Logs",
+    "entityType": "audit",
+    "entityId": "sec-1791711032815-129",
+    "action": "create",
+    "data": {
+      "id": "sec-1791711032815-129",
+      "timestamp": "2026-10-11T09:30:32.815Z",
+      "action": "GMAIL_SMTP_DELIVERY_TEST",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "FAILURE",
+      "details": "Gmail SMTP test sent to v******0@gmail.com: Outcome FAIL. Result: Failed to deliver email. The mail service reported a transmission error."
+    },
+    "timestamp": "2026-10-11T09:30:32.818Z",
+    "attempts": 0
+  },
+  {
+    "id": "qb-1791711112739-c785c0",
+    "category": "Login_Audit_Logs",
+    "entityType": "audit",
+    "entityId": "sec-1791711112738-417",
+    "action": "create",
+    "data": {
+      "id": "sec-1791711112738-417",
+      "timestamp": "2026-10-11T09:31:52.738Z",
+      "action": "OWNER_LOGIN_SUCCESS",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Owner authenticated with verified password."
+    },
+    "timestamp": "2026-10-11T09:31:52.739Z",
+    "attempts": 0
+  },
+  {
+    "id": "qb-1791711114272-e53267",
+    "category": "Login_Audit_Logs",
+    "entityType": "audit",
+    "entityId": "sec-1791711114272-112",
+    "action": "create",
+    "data": {
+      "id": "sec-1791711114272-112",
+      "timestamp": "2026-10-11T09:31:54.272Z",
+      "action": "GMAIL_SMTP_DELIVERY_TEST",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "FAILURE",
+      "details": "Gmail SMTP test sent to v******0@gmail.com: Outcome FAIL. Result: SMTP Authentication Failed (535 BadCredentials): Google rejected the App Password for dhanushya1702@gmail.com. Please verify that 2-Step Verification is enabled on the Google account and generate a fresh 16-character App Password at https://myaccount.google.com/apppasswords."
+    },
+    "timestamp": "2026-10-11T09:31:54.272Z",
+    "attempts": 0
+  },
+  {
+    "id": "qb-1791713664516-08f0d9",
+    "category": "Login_Audit_Logs",
+    "entityType": "audit",
+    "entityId": "sec-1791713664515-485",
+    "action": "create",
+    "data": {
+      "id": "sec-1791713664515-485",
+      "timestamp": "2026-10-11T10:14:24.515Z",
+      "action": "OWNER_LOGIN_FAILED",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "2001:4490:4e24:f489:1405:fac7:9ed3:bbb8, 169.254.169.126",
+      "outcome": "FAILURE",
+      "details": "Incorrect password. 4 attempts remaining before lockout."
+    },
+    "timestamp": "2026-10-11T10:14:24.516Z",
+    "attempts": 0
+  },
+  {
+    "id": "qb-1791713831635-dc0913",
+    "category": "Login_Audit_Logs",
+    "entityType": "audit",
+    "entityId": "sec-1791713831634-143",
+    "action": "create",
+    "data": {
+      "id": "sec-1791713831634-143",
+      "timestamp": "2026-10-11T10:17:11.635Z",
+      "action": "OWNER_LOGIN_SUCCESS",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Owner authenticated with verified password."
+    },
+    "timestamp": "2026-10-11T10:17:11.635Z",
+    "attempts": 0
+  },
+  {
+    "id": "qb-1791713882173-ae5db8",
+    "category": "Login_Audit_Logs",
+    "entityType": "audit",
+    "entityId": "sec-1791713882171-712",
+    "action": "create",
+    "data": {
+      "id": "sec-1791713882171-712",
+      "timestamp": "2026-10-11T10:18:02.172Z",
+      "action": "OWNER_LOGIN_SUCCESS",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "2001:4490:4e24:f489:1405:fac7:9ed3:bbb8, 169.254.169.126",
+      "outcome": "SUCCESS",
+      "details": "Owner authenticated with verified password."
+    },
+    "timestamp": "2026-10-11T10:18:02.172Z",
+    "attempts": 0
+  },
+  {
+    "id": "qb-1791713916822-9f52de",
+    "category": "Login_Audit_Logs",
+    "entityType": "audit",
+    "entityId": "sec-1791713916821-783",
+    "action": "create",
+    "data": {
+      "id": "sec-1791713916821-783",
+      "timestamp": "2026-10-11T10:18:36.821Z",
+      "action": "EMERGENCY_KEY_ROTATED",
+      "userIdentifier": "v******8@gmail.com",
+      "ip": "2001:4490:4e24:f489:1405:fac7:9ed3:bbb8, 169.254.169.126",
+      "outcome": "SUCCESS",
+      "details": "Owner emergency recovery key generated and rotated. Only hash stored."
+    },
+    "timestamp": "2026-10-11T10:18:36.822Z",
+    "attempts": 0
+  },
+  {
+    "id": "qb-1791713981178-66b9ec",
+    "category": "Login_Audit_Logs",
+    "entityType": "audit",
+    "entityId": "sec-1791713981177-853",
+    "action": "create",
+    "data": {
+      "id": "sec-1791713981177-853",
+      "timestamp": "2026-10-11T10:19:41.177Z",
+      "action": "GMAIL_SMTP_DELIVERY_TEST",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "2001:4490:4e24:f489:1405:fac7:9ed3:bbb8, 169.254.169.126",
+      "outcome": "FAILURE",
+      "details": "Gmail SMTP test sent to v******0@gmail.com: Outcome FAIL. Result: Gmail SMTP configuration pending: Please add SMTP_PASS in server environment variables. Sender: dhanushya1702@gmail.com, Host: smtp.gmail.com:587."
+    },
+    "timestamp": "2026-10-11T10:19:41.178Z",
+    "attempts": 0
+  },
+  {
+    "id": "qb-1791715094997-66b3dc",
+    "category": "Login_Audit_Logs",
+    "entityType": "audit",
+    "entityId": "sec-1791715094996-788",
+    "action": "create",
+    "data": {
+      "id": "sec-1791715094996-788",
+      "timestamp": "2026-10-11T10:38:14.996Z",
+      "action": "OWNER_LOGIN_SUCCESS",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Owner authenticated with verified password."
+    },
+    "timestamp": "2026-10-11T10:38:14.997Z",
+    "attempts": 0
+  },
+  {
+    "id": "qb-1791715095018-1bc0cd",
+    "category": "Login_Audit_Logs",
+    "entityType": "audit",
+    "entityId": "sec-1791715095017-595",
+    "action": "create",
+    "data": {
+      "id": "sec-1791715095017-595",
+      "timestamp": "2026-10-11T10:38:15.017Z",
+      "action": "GMAIL_SMTP_DELIVERY_TEST",
+      "userIdentifier": "d******2@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "FAILURE",
+      "details": "Gmail SMTP test sent to d******2@gmail.com: Outcome FAIL. Result: Gmail SMTP configuration pending: Please add SMTP_PASS in the Secrets panel. Sender: vasanthnkl500@gmail.com, Host: smtp.gmail.com:587. (Generate an App Password at https://myaccount.google.com/apppasswords and add it to Secrets as SMTP_PASS)."
+    },
+    "timestamp": "2026-10-11T10:38:15.018Z",
+    "attempts": 0
+  }
+]

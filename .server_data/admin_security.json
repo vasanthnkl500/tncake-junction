@@ -1,0 +1,369 @@
+{
+  "owner": {
+    "id": "owner-cakejunction-primary",
+    "email": "vasanthdhanushya1998@gmail.com",
+    "alternateEmails": [
+      "VASANTHDHANUSHYA1998@gmail.com",
+      "vasanthnkl500@gmail.com"
+    ],
+    "phone": "8825648728",
+    "phoneCountryCode": "+91",
+    "isPhoneVerified": false,
+    "passwordHash": "a67f71aa4368fd3853e13994d4d9b7ef24d7c05620917080150a6009e8fb9c136f31ded2de5f3ef6f2923469dc0d743b8d5fb5608bf4398457be3abe1bf4eae1",
+    "passwordSalt": "4d8200785c243dd037d9024a20a18aeefeaf05c8dc9345c897fc4693f72ab6ea",
+    "recoveryKeyHash": "3a13c0eb44a220a34275910bf48dd9cb6fe3337083c259aca2f0096cb1d78ec4",
+    "recoveryKeyStatus": "active",
+    "recoveryKeyRotatedAt": "2026-10-11T10:18:36.821Z",
+    "failedLoginAttempts": 0,
+    "lockedUntil": null,
+    "createdAt": "2026-10-10T11:59:16.825Z",
+    "updatedAt": "2026-10-11T10:18:36.821Z",
+    "lastPasswordChangedAt": "2026-10-11T09:05:00.000Z",
+    "lastLoginAt": "2026-10-11T10:38:14.995Z"
+  },
+  "staff": [],
+  "securityLogs": [
+    {
+      "id": "sec-1791715095017-595",
+      "timestamp": "2026-10-11T10:38:15.017Z",
+      "action": "GMAIL_SMTP_DELIVERY_TEST",
+      "userIdentifier": "d******2@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "FAILURE",
+      "details": "Gmail SMTP test sent to d******2@gmail.com: Outcome FAIL. Result: Gmail SMTP configuration pending: Please add SMTP_PASS in the Secrets panel. Sender: vasanthnkl500@gmail.com, Host: smtp.gmail.com:587. (Generate an App Password at https://myaccount.google.com/apppasswords and add it to Secrets as SMTP_PASS)."
+    },
+    {
+      "id": "sec-1791715094996-788",
+      "timestamp": "2026-10-11T10:38:14.996Z",
+      "action": "OWNER_LOGIN_SUCCESS",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Owner authenticated with verified password."
+    },
+    {
+      "id": "sec-1791713981177-853",
+      "timestamp": "2026-10-11T10:19:41.177Z",
+      "action": "GMAIL_SMTP_DELIVERY_TEST",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "2001:4490:4e24:f489:1405:fac7:9ed3:bbb8, 169.254.169.126",
+      "outcome": "FAILURE",
+      "details": "Gmail SMTP test sent to v******0@gmail.com: Outcome FAIL. Result: Gmail SMTP configuration pending: Please add SMTP_PASS in server environment variables. Sender: dhanushya1702@gmail.com, Host: smtp.gmail.com:587."
+    },
+    {
+      "id": "sec-1791713916821-783",
+      "timestamp": "2026-10-11T10:18:36.821Z",
+      "action": "EMERGENCY_KEY_ROTATED",
+      "userIdentifier": "v******8@gmail.com",
+      "ip": "2001:4490:4e24:f489:1405:fac7:9ed3:bbb8, 169.254.169.126",
+      "outcome": "SUCCESS",
+      "details": "Owner emergency recovery key generated and rotated. Only hash stored."
+    },
+    {
+      "id": "sec-1791713882171-712",
+      "timestamp": "2026-10-11T10:18:02.172Z",
+      "action": "OWNER_LOGIN_SUCCESS",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "2001:4490:4e24:f489:1405:fac7:9ed3:bbb8, 169.254.169.126",
+      "outcome": "SUCCESS",
+      "details": "Owner authenticated with verified password."
+    },
+    {
+      "id": "sec-1791713831634-143",
+      "timestamp": "2026-10-11T10:17:11.635Z",
+      "action": "OWNER_LOGIN_SUCCESS",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Owner authenticated with verified password."
+    },
+    {
+      "id": "sec-1791713664515-485",
+      "timestamp": "2026-10-11T10:14:24.515Z",
+      "action": "OWNER_LOGIN_FAILED",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "2001:4490:4e24:f489:1405:fac7:9ed3:bbb8, 169.254.169.126",
+      "outcome": "FAILURE",
+      "details": "Incorrect password. 4 attempts remaining before lockout."
+    },
+    {
+      "id": "sec-1791711114272-112",
+      "timestamp": "2026-10-11T09:31:54.272Z",
+      "action": "GMAIL_SMTP_DELIVERY_TEST",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "FAILURE",
+      "details": "Gmail SMTP test sent to v******0@gmail.com: Outcome FAIL. Result: SMTP Authentication Failed (535 BadCredentials): Google rejected the App Password for dhanushya1702@gmail.com. Please verify that 2-Step Verification is enabled on the Google account and generate a fresh 16-character App Password at https://myaccount.google.com/apppasswords."
+    },
+    {
+      "id": "sec-1791711112738-417",
+      "timestamp": "2026-10-11T09:31:52.738Z",
+      "action": "OWNER_LOGIN_SUCCESS",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Owner authenticated with verified password."
+    },
+    {
+      "id": "sec-1791711032815-129",
+      "timestamp": "2026-10-11T09:30:32.815Z",
+      "action": "GMAIL_SMTP_DELIVERY_TEST",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "FAILURE",
+      "details": "Gmail SMTP test sent to v******0@gmail.com: Outcome FAIL. Result: Failed to deliver email. The mail service reported a transmission error."
+    },
+    {
+      "id": "sec-1791711023254-997",
+      "timestamp": "2026-10-11T09:30:23.254Z",
+      "action": "OWNER_LOGIN_SUCCESS",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Owner authenticated with verified password."
+    },
+    {
+      "id": "sec-1791710061304-826",
+      "timestamp": "2026-10-11T09:14:21.304Z",
+      "action": "GMAIL_SMTP_DELIVERY_TEST",
+      "userIdentifier": "v******8@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "FAILURE",
+      "details": "Gmail SMTP test sent to v******8@gmail.com: Outcome FAIL. Result: Failed to deliver email. The mail service reported a transmission error."
+    },
+    {
+      "id": "sec-1791710060312-731",
+      "timestamp": "2026-10-11T09:14:20.312Z",
+      "action": "OWNER_LOGIN_SUCCESS",
+      "userIdentifier": "v******8@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Owner authenticated with verified password."
+    },
+    {
+      "id": "sec-1791710046587-266",
+      "timestamp": "2026-10-11T09:14:06.587Z",
+      "action": "OWNER_ACCOUNT_INITIALIZED_WITH_RECOVERY_KEY",
+      "userIdentifier": "v******8@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Owner account initialized with email v******8@gmail.com and phone +91 88*** **728. Emergency recovery key generated and hashed before disk storage."
+    },
+    {
+      "id": "sec-1791710046547-748",
+      "timestamp": "2026-10-11T09:14:06.547Z",
+      "action": "OWNER_LOGIN_SUCCESS",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Owner authenticated with verified password."
+    },
+    {
+      "id": "sec-1791709838605-191",
+      "timestamp": "2026-10-11T09:10:38.605Z",
+      "action": "MANUAL_FULL_BACKUP_DISPATCHED",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "117.196.166.65, 169.254.169.126",
+      "outcome": "SUCCESS",
+      "details": "Backed up 5 categories."
+    },
+    {
+      "id": "sec-1791709815558-418",
+      "timestamp": "2026-10-11T09:10:15.558Z",
+      "action": "GOOGLE_DRIVE_AUTHORIZED",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "117.196.166.65, 169.254.169.126",
+      "outcome": "SUCCESS",
+      "details": "Drive authorized for vasanthdhanushya1998@gmail.com."
+    },
+    {
+      "id": "sec-1791709544612-574",
+      "timestamp": "2026-10-11T09:05:44.612Z",
+      "action": "OWNER_LOGIN_SUCCESS",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Owner authenticated with verified password."
+    },
+    {
+      "id": "sec-1791709507617-132",
+      "timestamp": "2026-10-11T09:05:07.617Z",
+      "action": "OWNER_LOGIN_SUCCESS",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "2001:4490:4e24:f489:1405:fac7:9ed3:bbb8, 169.254.169.126",
+      "outcome": "SUCCESS",
+      "details": "Owner authenticated with verified password."
+    },
+    {
+      "id": "sec-1791709462478-835",
+      "timestamp": "2026-10-11T09:04:22.478Z",
+      "action": "OWNER_LOGIN_SUCCESS",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "2001:4490:4e24:f489:1405:fac7:9ed3:bbb8, 169.254.169.126",
+      "outcome": "SUCCESS",
+      "details": "Owner authenticated with verified password."
+    },
+    {
+      "id": "sec-1791709401333-615",
+      "timestamp": "2026-10-11T09:03:21.333Z",
+      "action": "OWNER_LOGIN_SUCCESS",
+      "userIdentifier": "v******8@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Owner authenticated with verified password."
+    },
+    {
+      "id": "sec-1791709395963-835",
+      "timestamp": "2026-10-11T09:03:15.964Z",
+      "action": "OWNER_LOGIN_SUCCESS",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Owner authenticated with verified password."
+    },
+    {
+      "id": "sec-1791709011255-325",
+      "timestamp": "2026-10-11T08:56:51.255Z",
+      "action": "ADMIN_PASSWORD_RESET_ATTEMPT",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "2001:4490:4e24:f489:1405:fac7:9ed3:bbb8, 169.254.169.126",
+      "outcome": "FAILURE",
+      "details": "Password reset requested for unrecognized admin email."
+    },
+    {
+      "id": "sec-1791708935559-130",
+      "timestamp": "2026-10-11T08:55:35.560Z",
+      "action": "ADMIN_PASSWORD_RESET_ATTEMPT",
+      "userIdentifier": "v******0@gmail.com",
+      "ip": "2001:4490:4e24:f489:1405:fac7:9ed3:bbb8, 169.254.169.126",
+      "outcome": "FAILURE",
+      "details": "Password reset requested for unrecognized admin email."
+    },
+    {
+      "id": "sec-1791706820464-437",
+      "timestamp": "2026-10-11T08:20:20.465Z",
+      "action": "ACCOUNT_RECOVERY_COMPROMISED_KEY",
+      "userIdentifier": "RECOVERY_ATTEMPT",
+      "ip": "127.0.0.1",
+      "outcome": "BLOCKED",
+      "details": "Previously exposed recovery key was rejected."
+    },
+    {
+      "id": "sec-1791637867192-892",
+      "timestamp": "2026-10-10T13:11:07.192Z",
+      "action": "PASSWORD_CHANGED_SUCCESS",
+      "userIdentifier": "V******8@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Owner password changed via verified current password. Revoked 1 active sessions."
+    },
+    {
+      "id": "sec-1791637866909-974",
+      "timestamp": "2026-10-10T13:11:06.909Z",
+      "action": "OWNER_LOGIN_SUCCESS",
+      "userIdentifier": "v******8@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Owner authenticated with verified password."
+    },
+    {
+      "id": "sec-1791637866799-107",
+      "timestamp": "2026-10-10T13:11:06.799Z",
+      "action": "PASSWORD_CHANGED_SUCCESS",
+      "userIdentifier": "V******8@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Owner password changed via verified current password. Revoked 1 active sessions."
+    },
+    {
+      "id": "sec-1791637866481-474",
+      "timestamp": "2026-10-10T13:11:06.481Z",
+      "action": "OWNER_LOGIN_SUCCESS",
+      "userIdentifier": "v******8@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Owner authenticated with verified password."
+    },
+    {
+      "id": "sec-1791637064768-rotated",
+      "timestamp": "2026-10-10T12:57:44.768Z",
+      "action": "EMERGENCY_RECOVERY_KEY_ROTATED",
+      "userIdentifier": "SYSTEM_SECURITY",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Previously exposed recovery key invalidated and replaced with fresh high-entropy single-use secret. All plaintext console logging removed."
+    },
+    {
+      "id": "sec-1791636980112-891",
+      "timestamp": "2026-10-10T12:56:20.112Z",
+      "action": "OWNER_LOGIN_FAILED",
+      "userIdentifier": "v******8@gmail.com",
+      "ip": "2001:4490:4e24:c932:55b9:efbb:bb33:8ea2, 169.254.169.126",
+      "outcome": "FAILURE",
+      "details": "Incorrect password. 2 attempts remaining before lockout."
+    },
+    {
+      "id": "sec-1791636968459-146",
+      "timestamp": "2026-10-10T12:56:08.459Z",
+      "action": "OWNER_LOGIN_FAILED",
+      "userIdentifier": "v******8@gmail.com",
+      "ip": "2001:4490:4e24:c932:55b9:efbb:bb33:8ea2, 169.254.169.126",
+      "outcome": "FAILURE",
+      "details": "Incorrect password. 3 attempts remaining before lockout."
+    },
+    {
+      "id": "sec-1791633578064-508",
+      "timestamp": "2026-10-10T11:59:38.064Z",
+      "action": "PASSWORD_OTP_REJECTED_BAD_PW",
+      "userIdentifier": "V******8@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "FAILURE",
+      "details": "Incorrect current password provided when requesting OTP."
+    },
+    {
+      "id": "sec-1791633573530-477",
+      "timestamp": "2026-10-10T11:59:33.530Z",
+      "action": "PASSWORD_OTP_DISPATCH_FAILED",
+      "userIdentifier": "+91 88*** **728",
+      "ip": "127.0.0.1",
+      "outcome": "FAILURE",
+      "details": "Failed to dispatch OTP: [unconfigured] SMS Gateway Not Configured: No live SMS provider credentials (FAST2SMS_API_KEY or MSG91_AUTH_KEY) have been configured in server environment secrets."
+    },
+    {
+      "id": "sec-1791633570194-492",
+      "timestamp": "2026-10-10T11:59:30.194Z",
+      "action": "OWNER_LOGIN_FAILED",
+      "userIdentifier": "v******8@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "FAILURE",
+      "details": "Incorrect password. 4 attempts remaining before lockout."
+    },
+    {
+      "id": "sec-1791633566219-473",
+      "timestamp": "2026-10-10T11:59:26.219Z",
+      "action": "OWNER_LOGIN_SUCCESS",
+      "userIdentifier": "v******8@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Owner authenticated with verified password."
+    },
+    {
+      "id": "sec-1791633563081-944",
+      "timestamp": "2026-10-10T11:59:23.081Z",
+      "action": "ACCOUNT_RECOVERED_SUCCESS",
+      "userIdentifier": "V******8@gmail.com",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Owner account recovered with emergency key. Rotated recovery key and revoked all sessions."
+    },
+    {
+      "id": "sec-1791633556825-1",
+      "timestamp": "2026-10-10T11:59:16.825Z",
+      "action": "SECURITY_SYSTEM_INITIALIZED",
+      "userIdentifier": "SYSTEM",
+      "ip": "127.0.0.1",
+      "outcome": "SUCCESS",
+      "details": "Admin security engine bootstrapped with PBKDF2-SHA512 cryptographic hashing and emergency recovery key."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix Remix Remix Remix Artisan Cake Studio \u0026 Bakery",
+  "description": "Premium cake shop website with owner admin dashboard, phone OTP/customer portal, WhatsApp enquiries, daily photo uploads, and direct UPI QR payments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

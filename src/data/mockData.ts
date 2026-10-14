@@ -1,0 +1,702 @@
+import { ShopSettings, Cake, CustomerFeedback, CustomerEnquiry, CustomerOrder, SlideshowSlide, SlideshowSettings } from '../types';
+
+export const DEFAULT_SHOP_SETTINGS: ShopSettings = {
+  // Shop Availability (Master Order Intake Control)
+  is_open: true,
+  isOpen: true,
+  closureMessage: "Cake Junction is currently closed for new orders. Our bakers are busy handcrafting pending celebrations. Please check our scheduled reopening or message us on WhatsApp for advance enquiries.",
+  reopeningTimestamp: null,
+
+  shopName: "Cake Junction",
+  tagline: "Artisan Cake Studio & Handcrafted Patisserie",
+  story: "At Cake Junction, we believe every milestone celebration deserves a masterpiece. Handcrafted fresh from scratch with pure dairy butter, pure Belgian couverture, and real fruit compotes, our artisanal cakes transform birthdays, weddings, and anniversaries into unforgettable memories.",
+  bakerName: "Chef Ananya R.",
+  bakerBio: "Trained in French pâtisserie and classical confectionery, Chef Ananya infuses Indian botanical flavors like cardamom, saffron, and damask rose into contemporary Swiss buttercream tiers.",
+  bakerImageUrl: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80",
+  heroHeadline: "Beautiful Cakes, Baked for Your Special Moments.",
+  heroSubheadline: "Handcrafted celebration cakes, bespoke wedding tiers, and daily fresh bakes made to order with organic butter and pure Belgian couverture.",
+  announcementBanner: "✨ Special Seasonal Feature: Mango Saffron Torte now available for pre-orders!",
+  isAnnouncementActive: true,
+  currency: "INR",
+  minNoticeDays: 2,
+  isTamilEnabled: false,
+  isLaunched: true,
+  paymentMode: "manual_upi",
+  isUpiEnabled: true, // Configurable later by owner
+  upiId: "artisanbakery@upi",
+  payeeName: "The Artisan Cake Studio",
+  upiQrImageUrl: "",
+  paymentInstructions: "Please scan our official bakery UPI QR code or transfer to our verified UPI ID. Submit your 12-digit UTR below for our accounts team to verify against our bank statement.",
+  paymentPurpose: "Advance Deposit (50%) or Full Order Settlement",
+  
+  // SMS Gateway Configuration (Defaults to 'none' until owner provides live credentials)
+  smsGateway: {
+    provider: 'none',
+    apiKey: '',
+    senderId: 'CKJNCT',
+    dltTemplateId: '',
+    entityId: '',
+    isLive: false,
+    status: 'unconfigured',
+    lastTestStatus: 'not_tested',
+    lastTestMessage: 'No SMS gateway configured yet. Add Fast2SMS or MSG91 credentials to enable automated SMS.'
+  },
+
+  openingHours: "Tue - Sun: 10:00 AM - 08:30 PM (Mondays Closed)",
+  phone: "+91 8825648728",
+  whatsappNumber: "+91 8825648728",
+  email: "orders@theartisancakestudio.com",
+  address: "Shop 4, Rosewood Pavilion, Blossom Avenue",
+  city: "Chennai",
+  postalCode: "600028",
+  mapsUrl: "https://maps.google.com",
+  instagramUrl: "https://instagram.com",
+  deliveryAreas: "Complimentary pickup from atelier. Doorstep temperature-controlled delivery available across city limits.",
+  pickupInstructions: "Please present your order reference number during pickup window between 11 AM - 7 PM.",
+  deliveryCharge: 150,
+  freeDeliveryThreshold: 4000,
+  deliveryTerms: "Custom tiered cakes are delivered by dedicated chilled bakery vehicles. Orders must be placed at least 48 hours in advance.",
+  cancellationPolicy: "Due to the custom nature of perishable baked goods, cancellations requested >48 hours prior to fulfilment receive 80% store credit or refund. Within 48 hours of celebration, orders cannot be cancelled once baking has commenced.",
+  privacyPolicy: "We collect only your contact number and celebration preferences solely to fulfil your cake order. We never sell or share your personal data with third-party advertisers.",
+  termsOfService: "Cake designs are handcrafted artisanal interpretations. Color tones and hand-piped flowers may exhibit subtle natural variations.",
+  
+  // Invoice & Receipt Sequence Configuration
+  invoicePrefix: "INV",
+  invoiceStartingNumber: 1001,
+  invoiceCurrentSequence: 1003,
+  includeYearInInvoice: true,
+  fssaiNumber: "12423008000452",
+  gstinNumber: "33AAACG1234F1Z5",
+  invoiceTerms: "1. Perishable confectionery crafted fresh to custom specification; payments non-refundable once production commences.\n2. In the event of transit delay caused by force majeure, Cake Junction will communicate promptly.\n3. All disputes subject to Chennai jurisdiction.",
+  
+  faqs: [
+    {
+      id: 'faq-1',
+      category: 'Orders',
+      question: 'How far in advance should I place my custom cake order?',
+      answer: 'For standard celebration cakes, we require a minimum of 48 hours advance notice. For multi-tiered wedding cakes and sculpted custom designs, we recommend reserving your date 1 to 2 weeks in advance.'
+    },
+    {
+      id: 'faq-2',
+      category: 'Dietary',
+      question: 'Are eggless options available for all flavours?',
+      answer: 'Yes! Over 90% of our signature flavours can be baked 100% eggless using organic condensed dairy and flax-emulsion methods without compromising moisture or crumb softness.'
+    },
+    {
+      id: 'faq-3',
+      category: 'Delivery',
+      question: 'How are multi-tiered celebration cakes transported?',
+      answer: 'We utilize dedicated climate-controlled, air-conditioned delivery vans with custom non-slip silicone bases to ensure your cake arrives in pristine, gallery-worthy condition.'
+    },
+    {
+      id: 'faq-4',
+      category: 'Payments',
+      question: 'How does payment work for custom quotes?',
+      answer: 'Once our head baker approves your design and date, we request a 50% advance deposit via direct UPI QR payment to confirm your baking slot. The remaining balance is payable prior to handover.'
+    }
+  ],
+  behindTheScenes: [
+    {
+      id: 'bts-1',
+      title: 'Hand-Piped Swiss Buttercream Florals',
+      imageUrl: 'https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=800&q=80',
+      caption: 'Every petal is individually piped using chilled natural dairy butter and subtle organic fruit pigments.'
+    },
+    {
+      id: 'bts-2',
+      title: 'Tempering Belgian Couverture 64%',
+      imageUrl: 'https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&w=800&q=80',
+      caption: 'Carefully monitored crystallization curves yield a mirror-shine gloss and crisp chocolate snap.'
+    },
+    {
+      id: 'bts-3',
+      title: 'Bespoke Packaging with Satin Ribbon',
+      imageUrl: 'https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&w=800&q=80',
+      caption: 'Heavyweight food-safe cake drums and protective transparent display cases ensure safe journeys.'
+    }
+  ]
+};
+
+export const SAMPLE_CAKES: Cake[] = [
+  {
+    id: "cake-1",
+    name: "Rose Pistachio Velvet Celebration",
+    slug: "rose-pistachio-velvet",
+    shortDescription: "Soft rose-water sponge layered with Persian pistachio cream and gold leaf.",
+    description: "Soft rose-water infused sponge layered with Persian pistachio cream, fresh raspberries, and edible gold leaf crown. Perfect for royal birthdays and intimate anniversaries.",
+    category: "Anniversary",
+    occasions: ["Anniversary", "Wedding", "Birthday"],
+    colourThemes: ["Blush Pink", "Pastel Cream", "Royal Gold"],
+    flavours: ["Rose Pistachio", "Vanilla Raspberry", "Cardamom Cream"],
+    weightOptions: [
+      { id: "w-1", weight: "0.5 kg", price: 950, description: "Serves 4–6" },
+      { id: "w-2", weight: "1.0 kg", price: 1800, description: "Serves 8–10" },
+      { id: "w-3", weight: "2.0 kg", price: 3400, description: "Serves 16–20" }
+    ],
+    specifications: [
+      { id: "s-1", label: "Filling", value: "Persian Pistachio Mousse & Raspberry Compote" },
+      { id: "s-2", label: "Finish", value: "Smooth Swiss Meringue Buttercream with 24k Gold Accents" }
+    ],
+    isEgglessOption: true,
+    allergens: "Contains Milk Dairy, Tree Nuts (Pistachio), Wheat Gluten.",
+    leadTimeHours: 24,
+    availability: "available_now",
+    isFeatured: true,
+    isPortfolioOnly: false,
+    viewCount: 142,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=80",
+        alt: "Rose Pistachio Celebration Cake with soft pink cream and floral accents",
+        isPrimary: true,
+        label: "Exterior Tier"
+      },
+      {
+        url: "https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=1200&q=80",
+        alt: "Cross section of moist pistachio crumb",
+        isPrimary: false,
+        label: "Crumb & Filling"
+      }
+    ],
+    isPublished: true,
+    createdAt: "2026-03-01T10:00:00Z",
+    updatedAt: "2026-03-01T10:00:00Z"
+  },
+  {
+    id: "cake-2",
+    name: "Pure Belgian Truffle Gateau",
+    slug: "pure-belgian-truffle",
+    shortDescription: "64% Callebaut dark chocolate sponge enveloped with silky whipped chocolate ganache.",
+    description: "Intense 64% Callebaut dark chocolate sponge enveloped with silky whipped chocolate ganache and hand-rolled truffles.",
+    category: "Birthday",
+    occasions: ["Birthday", "Anniversary"],
+    colourThemes: ["Dark Chocolate", "Royal Gold"],
+    flavours: ["Belgian Dark Truffle", "Mocha Chocolate", "Hazelnut Praline"],
+    weightOptions: [
+      { id: "w-1", weight: "0.5 kg", price: 850, description: "Serves 4–6" },
+      { id: "w-2", weight: "1.0 kg", price: 1600, description: "Serves 8–10" },
+      { id: "w-3", weight: "1.5 kg", price: 2350, description: "Serves 12–15" }
+    ],
+    specifications: [
+      { id: "s-1", label: "Chocolate Origin", value: "Callebaut 64% Dark Couverture, Belgium" },
+      { id: "s-2", label: "Texture", value: "Silky Ganache with Crunchy Cocoa Nib Base" }
+    ],
+    isEgglessOption: true,
+    allergens: "Dairy, Soy Lecithin, Gluten.",
+    leadTimeHours: 12,
+    availability: "available_now",
+    isFeatured: true,
+    isPortfolioOnly: false,
+    viewCount: 218,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&w=1200&q=80",
+        alt: "Belgian Dark Chocolate Cake with rich ganache",
+        isPrimary: true,
+        label: "Exterior Finish"
+      }
+    ],
+    isPublished: true,
+    createdAt: "2026-03-02T11:00:00Z",
+    updatedAt: "2026-03-02T11:00:00Z"
+  },
+  {
+    id: "cake-3",
+    name: "Whispering Blossom Two-Tier Wedding Cake",
+    slug: "whispering-blossom-wedding-cake",
+    shortDescription: "Two-tiered architectural cake finished with textured buttercream and pressed edible flowers.",
+    description: "An ethereal two-tiered architectural confection finished with textured rustic white chocolate buttercream, fresh eucalyptus, and pressed edible botanical petals.",
+    category: "Wedding",
+    occasions: ["Wedding", "Engagement", "Anniversary"],
+    colourThemes: ["Pastel Cream", "Blush Pink", "Royal Gold"],
+    flavours: ["Madagascar Vanilla Bean", "Lavender Honey", "Salted Caramel Macadamia"],
+    weightOptions: [
+      { id: "w-1", weight: "3.0 kg (2-tier)", price: 6200, description: "Serves 22–26 guests" },
+      { id: "w-2", weight: "5.0 kg (3-tier)", price: 9800, description: "Serves 40–45 guests" }
+    ],
+    specifications: [
+      { id: "s-1", label: "Structure", value: "Food-safe internal wooden dowels and heavy base drum" },
+      { id: "s-2", label: "Botanicals", value: "Organic unsprayed edible flower blossoms" }
+    ],
+    isEgglessOption: true,
+    allergens: "Dairy, Wheat Gluten.",
+    leadTimeHours: 72,
+    availability: "made_to_order",
+    isFeatured: true,
+    isPortfolioOnly: false,
+    viewCount: 185,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=1200&q=80",
+        alt: "Two tier wedding cake with soft floral accents",
+        isPrimary: true,
+        label: "Full Two-Tier"
+      }
+    ],
+    isPublished: true,
+    createdAt: "2026-03-03T09:00:00Z",
+    updatedAt: "2026-03-03T09:00:00Z"
+  },
+  {
+    id: "cake-4",
+    name: "Bespoke Safari Jungle Theme Cake",
+    slug: "safari-jungle-custom-cake",
+    shortDescription: "Handcrafted sugar-sculpted animal figures on moist caramel banana sponge.",
+    description: "Custom sculpted animal figures handcrafted with edible sugar paste over moist banana caramel sponge. Portfolio masterpiece for little explorer first birthdays.",
+    category: "Custom Cakes",
+    occasions: ["Birthday", "Baby Shower"],
+    colourThemes: ["Earthy Sage", "Pastel Cream"],
+    flavours: ["Banana Caramel", "Chocolate Chip Fudge"],
+    weightOptions: [
+      { id: "w-1", weight: "2.0 kg", price: 4200, description: "Serves 15–18" },
+      { id: "w-2", weight: "3.5 kg", price: 6900, description: "Serves 28–32" }
+    ],
+    specifications: [
+      { id: "s-1", label: "Sculpting", value: "Edible fondant handmade animals" }
+    ],
+    isEgglessOption: true,
+    allergens: "Dairy, Gluten.",
+    leadTimeHours: 96,
+    availability: "made_to_order",
+    isFeatured: false,
+    isPortfolioOnly: false,
+    viewCount: 94,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=1200&q=80",
+        alt: "Artisan sculpted celebration cake for birthdays",
+        isPrimary: true,
+        label: "Custom Sculpt"
+      }
+    ],
+    isPublished: true,
+    createdAt: "2026-03-04T14:00:00Z",
+    updatedAt: "2026-03-04T14:00:00Z"
+  },
+  {
+    id: "cake-5",
+    name: "Madagascar Vanilla & Berry Cupcake Platter",
+    slug: "vanilla-berry-cupcakes",
+    shortDescription: "Box of artisanal cupcakes swirled with Tahitian vanilla buttercream.",
+    description: "Set of 6 or 12 artisan cupcakes swirled with whipped Tahitian vanilla buttercream, centered with housemade wild berry compote.",
+    category: "Cupcakes",
+    occasions: ["Birthday", "Baby Shower", "Corporate"],
+    colourThemes: ["Blush Pink", "Pastel Cream"],
+    flavours: ["Tahitian Vanilla", "Wild Berry", "Belgian Cocoa"],
+    weightOptions: [
+      { id: "w-1", weight: "Box of 6", price: 650, description: "6 gourmet cupcakes" },
+      { id: "w-2", weight: "Box of 12", price: 1200, description: "12 gourmet cupcakes" }
+    ],
+    specifications: [
+      { id: "s-1", label: "Packaging", value: "Gold embossed window gift box with satin ribbon" }
+    ],
+    isEgglessOption: true,
+    allergens: "Dairy, Gluten.",
+    leadTimeHours: 12,
+    availability: "available_now",
+    isFeatured: false,
+    isPortfolioOnly: false,
+    viewCount: 110,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&w=1200&q=80",
+        alt: "Artisan piped vanilla berry cupcakes",
+        isPrimary: true,
+        label: "Platter Box"
+      }
+    ],
+    isPublished: true,
+    createdAt: "2026-03-05T12:00:00Z",
+    updatedAt: "2026-03-05T12:00:00Z"
+  },
+  {
+    id: "cake-6",
+    name: "Classic Italian Tiramisu Gateau",
+    slug: "classic-italian-tiramisu",
+    shortDescription: "Espresso steeped ladyfingers with whipped Galbani mascarpone and Valrhona cocoa.",
+    description: "Savoiardi ladyfingers steeped in freshly brewed Arabica espresso, layered with whipped Galbani mascarpone and dusted with Valrhona cocoa.",
+    category: "Eggless",
+    occasions: ["Birthday", "Anniversary"],
+    colourThemes: ["Dark Chocolate", "Pastel Cream"],
+    flavours: ["Classic Espresso", "Almond Amaretto Infusion"],
+    weightOptions: [
+      { id: "w-1", weight: "0.75 kg", price: 1250, description: "Serves 6–8" },
+      { id: "w-2", weight: "1.5 kg", price: 2300, description: "Serves 12–15" }
+    ],
+    specifications: [
+      { id: "s-1", label: "Coffee Blend", value: "Fresh Arabica dark roast single-origin" }
+    ],
+    isEgglessOption: true,
+    allergens: "Dairy, Coffee, Gluten.",
+    leadTimeHours: 24,
+    availability: "available_now",
+    isFeatured: true,
+    isPortfolioOnly: false,
+    viewCount: 176,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=1200&q=80",
+        alt: "Classic Italian Tiramisu Gateau dusted with cocoa",
+        isPrimary: true,
+        label: "Gateau Finish"
+      }
+    ],
+    isPublished: true,
+    createdAt: "2026-03-06T15:00:00Z",
+    updatedAt: "2026-03-06T15:00:00Z"
+  }
+];
+
+export const INITIAL_APPROVED_REVIEWS: CustomerFeedback[] = [
+  {
+    id: "rev-1",
+    customerName: "Priyanka & Karthik",
+    feedbackText: "The Rose Pistachio Velvet cake was the showstopper at our anniversary dinner! The floral aroma was delicate, perfectly balanced and not overly sweet. Every guest asked for your contact.",
+    rating: 5,
+    cakeId: "cake-1",
+    cakeName: "Rose Pistachio Velvet Celebration",
+    status: "approved",
+    consentToPublish: true,
+    publicReply: "Thank you so much Priyanka & Karthik! It was an absolute delight baking for your milestone.",
+    createdAt: "2026-03-04T12:30:00Z",
+    approvedAt: "2026-03-04T14:00:00Z"
+  },
+  {
+    id: "rev-2",
+    customerName: "Arun S.",
+    feedbackText: "Ordered the Belgian Truffle Gateau for my daughter's 10th birthday. The dark chocolate texture was so rich and the presentation was immaculate. Delivered right on the dot.",
+    rating: 5,
+    cakeId: "cake-2",
+    cakeName: "Pure Belgian Truffle Gateau",
+    status: "approved",
+    consentToPublish: true,
+    publicReply: "Warmest birthday wishes to your daughter! So glad everyone enjoyed the chocolate truffles.",
+    createdAt: "2026-03-05T18:00:00Z",
+    approvedAt: "2026-03-05T19:00:00Z"
+  }
+];
+
+export const INITIAL_ENQUIRIES: CustomerEnquiry[] = [
+  {
+    id: "enq-101",
+    referenceNumber: "ENQ-2026-001",
+    cakeName: "Rose Pistachio Velvet Celebration",
+    customerName: "Dr. Meenakshi Sundaram",
+    phone: "+91 94441 23456",
+    occasion: "Silver Jubilee Wedding Anniversary",
+    requiredDate: "2026-03-25",
+    preferredTime: "Evening (5 PM - 8 PM)",
+    flavour: "Vanilla Bean with Lavender Honey",
+    selectedWeight: "3.0 kg",
+    selectedPrice: 6200,
+    quantity: 1,
+    isEggless: true,
+    cakeMessage: "25 Years of Togetherness",
+    budgetInr: 6500,
+    message: "We would love a pastel cream two-tier cake with silver foil accents and delicate sugar blossoms to match our reception theme.",
+    deliveryOrPickup: "delivery",
+    address: "Breeze Enclave, ECR, Chennai - 600041",
+    status: "reviewing",
+    internalNotes: "Customer requested pastel tone match. Can deliver with temperature-controlled van.",
+    createdAt: "2026-03-08T09:15:00Z",
+    updatedAt: "2026-03-08T10:00:00Z"
+  }
+];
+
+export const INITIAL_ORDERS: CustomerOrder[] = [
+  {
+    id: "ord-201",
+    orderNumber: "ORD-2026-801",
+    enquiryId: "enq-101",
+    cakeId: "cake-1",
+    cakeName: "Silver Jubilee Celebration Tier",
+    cakeThumbnail: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80",
+    flavour: "Vanilla Bean Lavender",
+    weight: "3.0 kg",
+    quantity: 1,
+    unitPrice: 6200,
+    totalAmount: 6200,
+    depositAmount: 3100,
+    verifiedPaidAmount: 3100,
+    outstandingBalance: 3100,
+    orderStatus: "in_preparation",
+    fulfilmentStage: "baking",
+    fulfilmentHistory: [
+      {
+        id: "fh-1",
+        stage: "confirmed",
+        timestamp: "2026-03-08T11:00:00Z",
+        title: "Order Confirmed by Bakery",
+        message: "Advance deposit of ₹3,100 verified via UPI. Ingredients reserved and baking scheduled.",
+        updatedBy: "Chef Ananya R."
+      },
+      {
+        id: "fh-2",
+        stage: "baking",
+        timestamp: "2026-03-08T14:30:00Z",
+        title: "Sponges Freshly Baked & Cooling",
+        message: "Double sponge tiers freshly baked with French vanilla bean. Currently cooling before ganache masking.",
+        updatedBy: "Chef Ananya R."
+      }
+    ],
+    paymentStatus: "deposit_verified",
+    customerName: "Dr. Meenakshi Sundaram",
+    customerPhone: "+91 94441 23456",
+    customerEmail: "meenakshi.s@gmail.com",
+    securityPin: "482916",
+    isEggless: true,
+    cakeMessage: "25 Years of Togetherness",
+    occasion: "Silver Jubilee Wedding Anniversary",
+    colourTheme: "Pastel Cream & Silver",
+    fulfilmentDate: "2026-03-25",
+    fulfilmentTimeSlot: "Evening (05:00 PM - 08:30 PM)",
+    deliveryOrPickup: "delivery",
+    deliveryAddress: "Breeze Enclave, ECR, Chennai - 600041",
+    addressDetails: {
+      flatOrHouse: "Villa 14",
+      streetAndLocality: "Breeze Enclave, ECR",
+      area: "Kottivakkam",
+      city: "Chennai",
+      postalCode: "600041",
+      landmark: "Near Prarthana Drive-in",
+      deliveryInstructions: "Please deliver in chilled van, hand over directly to host"
+    },
+    deliveryFee: 150,
+    latestUpdateMessage: "Double sponge tiers freshly baked with French vanilla bean. Currently cooling before ganache masking.",
+    invoiceNumber: "INV-2026-1001",
+    invoiceGeneratedAt: "2026-03-08T11:00:00Z",
+    invoiceSequence: 1001,
+    createdAt: "2026-03-08T11:00:00Z",
+    updatedAt: "2026-03-08T14:30:00Z"
+  },
+  {
+    id: "ord-202",
+    orderNumber: "ORD-2026-802",
+    invoiceNumber: "INV-2026-1002",
+    invoiceGeneratedAt: "2026-03-09T09:00:00Z",
+    invoiceSequence: 1002,
+    cakeId: "cake-2",
+    cakeName: "Pure Belgian Truffle Gateau",
+    cakeThumbnail: "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?auto=format&fit=crop&w=800&q=80",
+    flavour: "Belgian Couverture 64%",
+    weight: "1.5 kg",
+    quantity: 1,
+    unitPrice: 2200,
+    totalAmount: 2200,
+    depositAmount: 2200,
+    verifiedPaidAmount: 2200,
+    outstandingBalance: 0,
+    orderStatus: "out_for_delivery",
+    fulfilmentStage: "out_for_delivery",
+    fulfilmentHistory: [
+      {
+        id: "fh-201",
+        stage: "confirmed",
+        timestamp: "2026-03-09T09:00:00Z",
+        title: "Order Confirmed",
+        message: "Full payment received and verified. Scheduled for birthday delivery.",
+        updatedBy: "Chef Ananya R."
+      },
+      {
+        id: "fh-202",
+        stage: "baking",
+        timestamp: "2026-03-09T10:15:00Z",
+        title: "Baking Complete",
+        message: "Soft Belgian dark chocolate sponge baked to perfection.",
+        updatedBy: "Bakery Kitchen"
+      },
+      {
+        id: "fh-203",
+        stage: "decorating",
+        timestamp: "2026-03-09T11:45:00Z",
+        title: "Decorated with Couverture Shavings",
+        message: "Handcrafted dark chocolate glaze and custom birthday message piped.",
+        updatedBy: "Chef Ananya R."
+      },
+      {
+        id: "fh-204",
+        stage: "ready",
+        timestamp: "2026-03-09T13:00:00Z",
+        title: "Quality Inspected & Chilled",
+        message: "Packed in presentation showcase box with satin ribbon.",
+        updatedBy: "Packaging Desk"
+      },
+      {
+        id: "fh-205",
+        stage: "out_for_delivery",
+        timestamp: "2026-03-09T14:10:00Z",
+        title: "Out for Temperature-Controlled Delivery",
+        message: "Dispatched in Cake Junction chilled van #CJ-02. Expected arrival around 3:30 PM.",
+        updatedBy: "Dispatch Manager"
+      }
+    ],
+    paymentStatus: "fully_paid",
+    customerName: "Sanjay Kumar",
+    customerPhone: "+91 98765 43210",
+    customerEmail: "sanjay.k@outlook.com",
+    securityPin: "629381",
+    isEggless: true,
+    cakeMessage: "Happy Birthday Tara!",
+    occasion: "Birthday",
+    colourTheme: "Rich Belgian Dark Chocolate",
+    fulfilmentDate: "2026-03-09",
+    fulfilmentTimeSlot: "Afternoon (01:00 PM - 05:00 PM)",
+    deliveryOrPickup: "delivery",
+    deliveryAddress: "Flat 4B, Emerald Heights, T. Nagar, Chennai - 600017",
+    addressDetails: {
+      flatOrHouse: "Flat 4B",
+      streetAndLocality: "Emerald Heights, North Usman Road",
+      area: "T. Nagar",
+      city: "Chennai",
+      postalCode: "600017",
+      landmark: "Opposite GRT",
+      deliveryInstructions: "Call upon arrival"
+    },
+    deliveryFee: 0,
+    latestUpdateMessage: "Dispatched in Cake Junction chilled van #CJ-02. Expected arrival around 3:30 PM.",
+    createdAt: "2026-03-09T09:00:00Z",
+    updatedAt: "2026-03-09T14:10:00Z"
+  },
+  {
+    id: "ord-203",
+    orderNumber: "ORD-2026-803",
+    cakeId: "cake-3",
+    cakeName: "Pastel Lambeth Vintage Heart",
+    cakeThumbnail: "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&w=800&q=80",
+    flavour: "Rose Berry Ganache",
+    weight: "1.0 kg",
+    quantity: 1,
+    unitPrice: 1750,
+    totalAmount: 1750,
+    depositAmount: 900,
+    verifiedPaidAmount: 900,
+    outstandingBalance: 850,
+    orderStatus: "ready",
+    fulfilmentStage: "ready_for_pickup",
+    fulfilmentHistory: [
+      {
+        id: "fh-301",
+        stage: "confirmed",
+        timestamp: "2026-03-09T08:00:00Z",
+        title: "Order Confirmed",
+        message: "Advance deposit received. Slotted for morning baking.",
+        updatedBy: "Chef Ananya R."
+      },
+      {
+        id: "fh-302",
+        stage: "baking",
+        timestamp: "2026-03-09T09:30:00Z",
+        title: "Baking Completed",
+        message: "Heart-shaped sponges baked with raspberry compote filling.",
+        updatedBy: "Bakery Kitchen"
+      },
+      {
+        id: "fh-303",
+        stage: "decorating",
+        timestamp: "2026-03-09T11:00:00Z",
+        title: "Vintage Piping Applied",
+        message: "Ornate Lambeth style frills piped with organic berry-tinted buttercream.",
+        updatedBy: "Chef Ananya R."
+      },
+      {
+        id: "fh-304",
+        stage: "ready_for_pickup",
+        timestamp: "2026-03-09T12:30:00Z",
+        title: "Ready for Pickup at Atelier Counter",
+        message: "Boxed and ready in our temperature-controlled display counter. Please bring order reference #ORD-2026-803.",
+        updatedBy: "Front Desk"
+      }
+    ],
+    paymentStatus: "deposit_verified",
+    customerName: "Priya V.",
+    customerPhone: "+91 97890 12345",
+    customerEmail: "priya.v@gmail.com",
+    securityPin: "318492",
+    isEggless: true,
+    cakeMessage: "Sweet 16 Ananya",
+    occasion: "Birthday",
+    colourTheme: "Blush Pink & Ivory",
+    fulfilmentDate: "2026-03-09",
+    fulfilmentTimeSlot: "Afternoon (01:00 PM - 05:00 PM)",
+    deliveryOrPickup: "pickup",
+    deliveryAddress: "Cake Junction Atelier, Blossom Avenue",
+    latestUpdateMessage: "Boxed and ready in our temperature-controlled display counter. Please bring order reference #ORD-2026-803.",
+    createdAt: "2026-03-09T08:00:00Z",
+    updatedAt: "2026-03-09T12:30:00Z"
+  }
+];
+
+export const DEFAULT_SLIDESHOW_SETTINGS: SlideshowSettings = {
+  isEnabled: true,
+  heading: "A Glimpse of Our Sweet Creations",
+  subtitle: "Made fresh with love, for your special moments.",
+  autoplay: true,
+  slideIntervalSeconds: 5,
+  transitionStyle: "slide",
+  transitionDurationMs: 600,
+  showArrows: true,
+  showPaginationDots: true,
+  showCaptions: true,
+  showCounter: true,
+  desktopLayout: "featured_with_peek"
+};
+
+export const INITIAL_SLIDESHOW_SLIDES: SlideshowSlide[] = [
+  {
+    id: "slide-1",
+    imageUrl: "https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=1200&q=80",
+    title: "Botanical Cascading Wedding Tier",
+    caption: "Vanilla bean sponge with raspberry compote & handcrafted sugar petals",
+    altText: "Three-tiered blush and cream wedding celebration cake decorated with edible gold leaf and fresh botanical roses",
+    order: 0,
+    isEnabled: true,
+    status: "published",
+    buttonLabel: "Explore Wedding Cakes",
+    buttonLink: "gallery",
+    uploadedAt: "2026-03-01T10:00:00Z",
+    updatedAt: "2026-03-01T10:00:00Z"
+  },
+  {
+    id: "slide-2",
+    imageUrl: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=80",
+    title: "Midnight Belgian Truffle Drip",
+    caption: "70% single-origin dark chocolate with hazelnut praline crunch",
+    altText: "Decadent dark Belgian chocolate ganache cake crowned with gold dust, chocolate macarons and glossy berries",
+    order: 1,
+    isEnabled: true,
+    status: "published",
+    buttonLabel: "Order Signature Chocolate",
+    buttonLink: "order",
+    uploadedAt: "2026-03-02T11:00:00Z",
+    updatedAt: "2026-03-02T11:00:00Z"
+  },
+  {
+    id: "slide-3",
+    imageUrl: "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&w=1200&q=80",
+    title: "Vintage Lambeth Heart Confection",
+    caption: "Hand-piped royal icing borders with delicate organic rose essence",
+    altText: "Artisanal Lambeth vintage pastel pink heart cake with intricate piped scrollwork and cherry topper",
+    order: 2,
+    isEnabled: true,
+    status: "published",
+    buttonLabel: "Custom Cake Enquiry",
+    buttonLink: "configurator",
+    uploadedAt: "2026-03-03T12:00:00Z",
+    updatedAt: "2026-03-03T12:00:00Z"
+  },
+  {
+    id: "slide-4",
+    imageUrl: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=1200&q=80",
+    title: "Rose Pistachio Atelier Gateau",
+    caption: "Fragrant saffron sponge paired with Persian pistachio mousseline",
+    altText: "Handcrafted pistachio and rose celebration cake garnished with crushed green pistachios and dried edible rosebuds",
+    order: 3,
+    isEnabled: true,
+    status: "published",
+    buttonLabel: "Chat on WhatsApp",
+    buttonLink: "whatsapp",
+    uploadedAt: "2026-03-04T13:00:00Z",
+    updatedAt: "2026-03-04T13:00:00Z"
+  }
+];
+
